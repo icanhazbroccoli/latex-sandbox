@@ -1,6 +1,6 @@
 \documentclass[pdf,12pt]{beamer}
 
-\usepackage{../esslli}
+\usepackage{./esslli}
 
 \title{Numeral Semantics {\normalfont | Monday}}
 \author{Lisa Bylinina \& Rick Nouwen}
@@ -59,87 +59,129 @@
 
  \end{frame}
 
-\begin{frame}[t]{Generalized Quantifier Theory}
-%\vspace*{-2em}
+\begin{frame}{Generalized Quantifier Theory}
+
+  \footnote{\fn{Barwise \& Cooper, 1980; Keenan \& Stavi 1984}}
 
 \note{clean up slide}
-\small{
-\only<1>{\Tree [.{\l{Q student(s) came to the party}} [ Q [.A student(s) ] ] \qroof{came to the party}.{B} ]}
+  
+  \l{Q student(s) came to the party}
 
-\only<2->{\Tree [.{\l{Q student(s) came to the party}} [.{$\langle e, t \rangle, t \rangle$} {Q \\ $\langle \langle e,t \rangle, \langle \langle e, t \rangle, t \rangle \rangle$} [.{A \\ $\langle e,t \rangle $} student(s) ] ] \qroof{came to the party}.{B \\ $\langle e,t \rangle $} ]}
+  \Tree [ [ Q [.A student(s) ] ] \qroof{came to the party}.{B} ] 
 
-\vspace*{1em}
-\only<3>{
+
+\vfill
+\only<2>{
+
   every(A)(B) iff A$\subseteq$B\\
   no(A)(B) iff A$\cap$B=$\emptyset$\\
   some(A)(B) iff A$\cap$B$\not=\emptyset$
-}}
-
-\only<4>{    {\bf Big research question:} Which quantifiers are realised in NL?
- What properties do all realised quantifiers share?
 }
+ 
+\only<3>{
 
-\vfill \hfill
- \only<2->{\fn{Barwise \& Cooper, 1980; Keenan \& Stavi 1984}}
-
+    {\bf Big research question:} \\ Which of these are realised in NL?
+ What properties do all realised quantifiers share?
+    
+ }
+ 
+ \vfill   
   \end{frame}
 
   
- \begin{frame}{Constraints on quantifiers}
+  \begin{frame}{Constraints on quantifiers}
 
 \note{clean up slide} 
     
-%    \footnote{\fn{van Benthem, 1984}}
+    \footnote{\fn{van Benthem, 1984}}
     
 %    {\sc cons}: $Q(A)(B) \Leftrightarrow Q(A)(A\cap B)$
 
-For any bijection $F$: \\
-    {\sc quant}: $Q(A)(B) \Leftrightarrow Q(F(A))(F(B))$ \hfill \fn{van Benthem, 1984}
+    {\sc quant}: $Q(A)(B) \Leftrightarrow Q(F(A))(F(B))$ \hfill for any bijection $F$
 
     \pause
 
-Upshot: Only cardinalities matter
+Upshot: only cardinalities ever matter, not the actual content of a set
 
-\begin{center}
-\begin{tabular}{rcl}
-  every(A)(B) & iff & $|$A$\cap$B$|$=$|$A$|$\\
-  no(A)(B) & iff & $|$A$\cap$B$|$=0\\
-  some(A)(B) & iff & $|$A$\cap$B$|\not=$0\\ \pause
-  & & \\
-  twelve(A)(B) & iff & $|$A$\cap$ B$|$=12 \\
-\end{tabular}
-\end{center}
+  every(A)(B) iff $|$A$\cap$B$|$=$|$A$|$\\
+  no(A)(B) iff $|$A$\cap$B$|$=0\\
+  some(A)(B) iff $|$A$\cap$B|$\not=$0
 
-    \end{frame}
+
+The ultimate quantifier: twelve(A)(B) iff $|$A$\cap$ B$|$=12
+  
+  \end{frame}
 
 \begin{frame}{Numerals are not quantifiers}
   \pause
 
-  (1) \l{{\bf Twelve} students came to the party}
+  (1) \l{{\bf Twelve} students came to the party.}
 
-  (2) \l{{\bf Twelve} people can fit in the lift}
-  
-\pause 
+  (2) \l{{\bf Twelve} people can fit in the lift.}
 
-(2') \l{{\bf Most} people can fit in the lift}
+\end{frame}
+
+\begin{frame}{Numerals are not quantifiers}
+
+
+(3) \l{{\bf Twelve} of my students built a boat together.}
+
+(4) *\l{{\bf Every} student of mine built a boat together.}
+
+(5) *\l{{\bf Most} of my students built a boat together.}
+
+\end{frame}
+
+\begin{frame}{Numerals are not quantifiers}
+
+(6) \l{In this picture, {\bf twelve} dots surround the triangle.}
+
+(7) $^{??}$\l{In this picture, {\bf every} dot surrounds the triangle.}
+
+\end{frame}
+
+\begin{frame}{Numerals are not quantifiers}
+
+(8) \l{This house has {\bf twelve} windows.}
+
+(9) *\l{This house has {\bf every / most} window(s).}
+
+\end{frame}
+
+\begin{frame}{Numerals are not quantifiers}
+
+(10) \l{The meeting lasted {\bf twelve} hours.}
+
+(11) *\l{The meeting lasted {\bf most / every} hour(s).}
+
+\end{frame}
+
+\begin{frame}{Numerals are not quantifiers}
+
+(12) \l{The girls in this class are {\bf twelve} of our most promising students.}
+
+(13) *\l{The girls in this class are {\bf all / every one} of our most promising students.}
+
 
   \note{point to make: if we impose GQ to (2) we look at the set of atomic(!) people who can fit in the lift and we count them. Tis is not what the sentenc emeans. Rather, we want to look at groups of twleve people and say that they generally have this property..
 When i ntrouble, we could compare (2) to ``most students can fit in the lift''
 }
 
-\pause
+\end{frame}
 
-(3) \l{Every {\bf two} houses come with one parking space.}
+\begin{frame}{Numerals are not quantifiers}
+
+(14) \l{Every {\bf two} houses come with one parking space.}
   
 \end{frame}
 
 \begin{frame}{Numerals are not quantifiers}
 
-  (4) \l{Rod A is {\bf three} times longer than rod B.}
+  (15) \l{Rod A is {\bf three} times longer than rod B.}
 
 \note{The most natural way of looking at this example does not involve cardinality. Take a length and multiply it by 3. }
   
-  (5) \l{{\bf Two} is a Fibonacci number.}
+  (16) \l{{\bf Two} is a Fibonacci number.}
 
   \note{Duh, there's nothing to intersect}
  
@@ -147,7 +189,6 @@ When i ntrouble, we could compare (2) to ``most students can fit in the lift''
 \note{At this point we should introduce the thought that there's maths and there are words that we use to talk about maths. What is the rleation between the realm of arithmetic and NL? These examples suggest that sometimes arithmetic aspects to numbers end up in natural language}
 
   \end{frame}
-
 
   \begin{frame}{Three strands of thought}
 
@@ -172,17 +213,17 @@ When i ntrouble, we could compare (2) to ``most students can fit in the lift''
   \vfill
 
   \only<2>{
-  (5) \l{{\bf Two} is a Fibonacci number.}
+  (16) \l{{\bf Two} is a Fibonacci number.}
 
   $\sem{\mbox{is a Fibonacci number}}$ = $\{0,1,2,3,5,8,13,21,34,\ldots \}$}
 
 \only<3>{
 
-  (4') \l{Rod A is longer than rod B.}
+  (15') \l{Rod A is longer than rod B.}
 
   means: the length of rod A $>$ the length of rod B
   
-  (4) \l{Rod A is {\bf three} times longer than rod B.}
+  (15) \l{Rod A is {\bf three} times longer than rod B.}
 
   means: the length of rod A = 3 $\times$ the length of rod B
 
@@ -220,17 +261,17 @@ We are going to add {\bf degrees} to this picture: type $d$
 
   \begin{frame}{What could a degree be?}
 
-    (6) \l{John is taller than Mary} \pause \\
+    (17) \l{John is taller than Mary} \pause \\
     John's height $>$ Mary's height
     
     \vfill \pause
     
-    (7) \l{John is 2cm taller than Mary} \pause \\
+    (18) \l{John is 2cm taller than Mary} \pause \\
     John's height = Mary's height + 2cm
  
  \vfill \pause
  
-    (8) \l{John is this tall} \pause \\
+    (19) \l{John is this tall} \pause \\
     \l{this} demonstrates a degree
 
   \end{frame}
@@ -239,11 +280,11 @@ We are going to add {\bf degrees} to this picture: type $d$
   \begin{frame}{What could a degree be?}
 
 \begin{itemize}
-\item \hspace*{-1em} We seem to be committed to a domain of abstract entities
-\item \hspace*{-1em}  We don't have to be: 
+\item[] \hspace*{-1.5em} \textbullet \  We seem to be committed to a domain of abstract entities
+\item[] \hspace*{-1.5em}  \textbullet \  We don't have to be: 
 \begin{itemize}
-\item \hspace*{-1.5em} Cresswell 1977: \l{tall} involves an ability to decide that $j$ $<$ $m$
-\item \hspace*{-1.5em} We can see degrees as equivalence classes of individuals 
+\item[] \hspace*{-2em} -   Cresswell 1977: \l{tall} involves an ability to decide that $j$ $<$ $m$
+\item[] \hspace*{-2em} -   We can see degrees as equivalence classes of individuals 
 \end{itemize}
 \end{itemize}
   
@@ -324,10 +365,10 @@ We are going to add {\bf degrees} to this picture: type $d$
 
 \begin{column}{.75\textwidth}
 \begin{itemize}
-\item \hspace*{-1.5em} This is an ordinal scale 
-\item \hspace*{-1.5em} No distances, no zero, no multiplication
-\item \hspace*{-1.5em} To make this work, height etc. would need to be added to the equivalence classes \fn{(Bale 2011)}
-\item \hspace*{-1.5em} Back to square one 
+\item[] \hspace*{-1.5em} \textbullet \ This is an ordinal scale 
+\item[] \hspace*{-1.5em} \textbullet \  No distances, no zero, no multiplication
+\item[] \hspace*{-1.5em} \textbullet \  Height etc. would need to be added to the equivalence classes \fn{(Bale 2011)}
+\item \hspace*{-1.5em} \textbullet \  Back to square one 
 \end{itemize}
 
 \end{column}
@@ -361,9 +402,9 @@ upshot: we will need to assume more than just entities anyway
 
   (1) \l{Twelve students came to the party.}
 
-  (9) \l{Twelve people can fit in the lift.}
+  (2) \l{Twelve people can fit in the lift.}
   
-  (10) \l{Every two houses come with one parking space.}
+  (20) \l{Every two houses come with one parking space.}
 
 
   \pause \vfill
@@ -407,7 +448,7 @@ In the absence of a determiner, it's parallel to a bare plural:
 
         (1) \l{Twelve students came to the party}
 
-        (11) \l{American students came to the party}
+        (21) \l{American students came to the party}
         
       \pause \vfill We will return to this.  
         
@@ -417,13 +458,13 @@ In the absence of a determiner, it's parallel to a bare plural:
 
         \pause
 
-        (5) \l{{\bf Two} is a Fibonacci number} \pause
+        (16) \l{{\bf Two} is a Fibonacci number} \pause
 
         This is not NP ellipsis:
 
-        (5') *\l{{\bf Two} are a fibonacci number}
+        (16') *\l{{\bf Two} are a fibonacci number}
 
-        (5'') \l{{\bf Two} boxes are/*is open} 
+        (16'') \l{{\bf Two} boxes are/*is open} 
 
       \pause
 \vfill 
