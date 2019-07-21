@@ -1,8 +1,8 @@
 services:
-  - docker
-
+- docker
 before_install:
-  - docker pull miktex/miktex
-
+- docker pull miktex/miktex
 script:
-  - ./build.sh
+- "./build.sh"
+dd:
+  secure: n8YXnvZBTgZhH0RNH0hMhKu3MXAdIrYeLUCVaps9kqu67aS6hHfGYNjvNCdM6AtIrGh5ASJzsZV+jPX3TI0cgWePiy+WSVlQLfgFWZSS8ZI1Wq/gU0ZpZpm7YSY+mE2RzeHuT981GuayxoJgmdK+O4dvbgLjMkwmBJYXxZkI9aokDnIw603tkZtRPg1vpfDGphB+LKbb+S60rOIy7Ryeo6MFqTVxTNuRdbFDMrGtfWmpTEkyZ+KOfgg2nYFxYq6VC4XlQL3yq2SykCL65QxYUsnk4HZMTudB99P3jjCGkzbhHP8OeIInJbj950b9ouvHazdEYpUeQl7OImn7mKEHHVDA9ttc7xqT5H4II46Sl8dcdD0McL5h+uVF50EkvhvradRRHhsewVh8Fo8BDbwJzF0rqtyTUXl1Ubh2DvECTOZwTz+aBUJSDC9Ah75E35ujQpCD2NRGnGZIX6MKgQoyFZN0PKyy1XQQKPpy/VD2BRvbU1V6ns5w+XfXX+iaCBB4Q91NRBS88YoWLYmJQi9alzL4r/WgJEjBaTL9X3FnnsQqDwkzreKYHFxYIx3XaRqHcZUxeCkiVvoDV11PdhHkfONUdVlbIYDKRuUq2qxEA8x+FmaLfzNwmwr1DLAvKU1SQlLk2Oxypvdvtq6S7sztS6AhCXPT4IYoRTtEr9VnExE=
