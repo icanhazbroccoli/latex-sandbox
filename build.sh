@@ -6,5 +6,5 @@ git config --global user.name "Travis CI"
 git add sample.pdf
 git commit -m "[skip travis] Automatic PDF build from ${TRAVIS_COMMIT}"
 git pull --rebase
-git remote add origin-push "https://${GH_TOKEN}@github.com/icanhazbroccoli/latex-sandbox.git"
+git remote add origin-push "https://${GITHUB_TOKEN}@github.com/icanhazbroccoli/latex-sandbox.git"
 git push --quiet --set-upstream origin-push HEAD
