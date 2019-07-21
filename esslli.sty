@@ -1,0 +1,36 @@
+%\usetheme[style=plain,sidebar=false]{uu}
+\usetheme{metropolis}
+\newcommand{\rfrnc}[1]{\textcolor{black!50}{\footnotesize #1}}
+
+%\usefonttheme[onlymath]{professionalfonts}
+%\usepackage{fontspec}
+%\setsansfont{Linux Biolinum O}
+
+% run in terminal with xelatex ignoring errors
+  
+\usepackage{tikz,tikz-qtree,colortbl}
+\usetikzlibrary{matrix}
+
+\newcommand{\bl}[1]{{\bf #1 }}
+\newcommand{\leaveout}[1]{}
+\renewcommand{\note}[1]{}% {\tiny #1}}
+
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\everymath\expandafter{\the\everymath \color{cobalt}}
+\everydisplay\expandafter{\the\everydisplay \color{cobalt}}
+\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\renewcommand{\l}[1]{{\color{cadmiumred}{#1}}}
+\newcommand{\sem}[1]{[\![#1]\!]}
+ 
+\let\thefootnote\relax\footnotetext{put text here}
+
+\newcommand{\fn}[1]{\textcolor{black!55}{{\tiny #1}}}
+\let\thefootnote\relax\footnotetext{put text here}
+
+\usepackage[normalem]{ulem}
+
+\newcommand{\many}{{\sc many}}
+\newcommand{\dist}{^*\!}
